@@ -1,13 +1,15 @@
 # osu! puush archive index
 
-An index of osu! replays, skins, beatmaps that were uploaded to puu.sh between 2011 and 2026 and 
-captured by the Wayback Machine. This data was collected on 2026-09-09. 
+An index of osu! replays, skins, beatmaps that were uploaded to puu.sh and captured by the Wayback Machine.
+This data was collected on 2026-09-09. 
+
+Every file should be downloadable through its `wayback_url` link.
 
 This index was created after akozn published [their discovery](https://www.reddit.com/r/osugame/comments/1wbetqq/replay_found_niko_iconoclasm_perditus_paradisus/) of Niko's 2011 perditus paradisus DT replay on Reddit, demonstrating that there's potentially a huge amount of old osu! content archived on the Wayback Machine that was otherwise lost to time.
 
 ## Data collection
 
-Every puu.sh URL captured by the Wayback Machine can be obtained by querying the [CDX index](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server):
+Every puu.sh URL captured by the Wayback Machine can be obtained by querying the [CDX index](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) for octet-streams and zip files:
 
 ```
 https://web.archive.org/cdx/search/cdx?url=puu.sh/4&matchType=prefix&filter=mimetype:application/octet-stream (mimetype:application/zip for zip files)
