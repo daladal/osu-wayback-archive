@@ -1,7 +1,7 @@
 # osu! puush archive index
 
-An index of osu! replays, skins, beatmaps that were uploaded to puu.sh and captured by the Wayback Machine.
-This data was collected on 2026-09-09. 
+An index of osu! replays, skins, beatmaps and difficulty files that were uploaded to puu.sh between 2010 and 2026 and 
+captured by the Wayback Machine. This data was collected on 2026-09-09. 
 
 Every file should be downloadable through its `wayback_url` link.
 
@@ -9,10 +9,10 @@ This index was created after akozn published [their discovery](https://www.reddi
 
 ## Data collection
 
-Every puu.sh URL captured by the Wayback Machine can be obtained by querying the [CDX index](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) for octet-streams and zip files:
+Every puu.sh URL captured by the Wayback Machine can be obtained by querying the [CDX index](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) for octet-streams, zip files, or plain text:
 
 ```
-https://web.archive.org/cdx/search/cdx?url=puu.sh/4&matchType=prefix&filter=mimetype:application/octet-stream (mimetype:application/zip for zip files)
+https://web.archive.org/cdx/search/cdx?url=puu.sh/4&matchType=prefix&filter=mimetype:application/octet-stream
 ```
 
 Each result gives a timestamp and puush ID, which is enough to download the capture and check whether it contains osu!-related files:
@@ -28,6 +28,7 @@ https://web.archive.org/web/{timestamp}id_/http://puu.sh/{id}
 | Replays (`.osr`) | 24,574 | 24,574 (one row per unique replay; 3,527 re-uploads folded into `copies`) | `replays_osr.jsonl` |
 | Skins (`.osk` + skin `.zip`) | 2,658 | ~1,730 by filename, ~2,440 by filename+size | `skins_osk.jsonl`, `skins_zip.jsonl` |
 | Beatmaps (`.osz` + beatmap `.zip`) | 25,960 | ~14,770 by filename, ~25,670 by filename+size | `beatmaps_osz.jsonl`, `beatmaps_zip.jsonl` |
+| Beatmap files (`.osu`) | 74 | 64 by filename, 71 by filename+size | `beatmaps_osu.jsonl` |
 
 - 5,502 distinct player names and 8,639 distinct beatmaps across the replays.
 - 169 `.zip` archives containing 1,020 more `.osr` files (`replays_zip.jsonl`).
