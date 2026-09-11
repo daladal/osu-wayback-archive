@@ -1,7 +1,6 @@
 # osu! puush archive index
 
-An index of osu! replays, skins, beatmaps and difficulty files that were uploaded to puu.sh between 2010 and 2026 and 
-captured by the Wayback Machine. This data was collected on 2026-09-09. 
+An index of osu! replays, skins, and beatmap files that were uploaded to puu.sh and captured by the Wayback Machine. This data was collected on 2026-09-09.
 
 Every file should be downloadable through its `wayback_url` link.
 
