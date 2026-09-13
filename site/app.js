@@ -11,9 +11,10 @@
   const fold = s => String(s == null ? '' : s).normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase();
   const fmtInt = n => n == null ? '' : Number(n).toLocaleString('en-US');
   const size = r => r.sz == null ? '' : r.sz >= 1048576 ? (r.sz / 1048576).toFixed(1) + ' MB' : r.sz >= 1024 ? Math.round(r.sz / 1024) + ' KB' : r.sz + ' B';
+  const safeWb = p => /^[\w./-]*$/.test(String(p == null ? '' : p)) ? String(p) : '';
   const link = r => {
-    let h = `<a href="${esc(WB + r.wb)}" title="${esc(r.fn || '')}" rel="noopener">download</a>`;
-    (r.copies || []).forEach((c, i) => { h += ` <a class="tag" href="${esc(WB + c)}" title="another archived copy" rel="noopener">alt${i + 1}</a>`; });
+    let h = `<a href="${esc(WB + safeWb(r.wb))}" title="${esc(r.fn || '')}" rel="noopener">download</a>`;
+    (r.copies || []).forEach((c, i) => { h += ` <a class="tag" href="${esc(WB + safeWb(c))}" title="another archived copy" rel="noopener">alt${i + 1}</a>`; });
     return h;
   };
   const partial = r => r.partial ? ' <span class="tag" title="archive listing incomplete: only part of it could be read">(partial)</span>' : '';
