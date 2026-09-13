@@ -2,25 +2,24 @@
 
 [Website](https://osu-wayback-archive.pages.dev/)
 
-An index of osu! replays, skins, and beatmap files that were uploaded to puu.sh and captured by the Wayback Machine. This data was collected on 2026-09-09.
+An index of osu! replays, skins, and beatmap files that were uploaded to now-dead file hosts and captured by the Wayback Machine. This data was collected on 2026-09-09.
 
 Every file should be downloadable through its `wayback_url` link.
 
 This index was created after akozn published [their discovery](https://www.reddit.com/r/osugame/comments/1wbetqq/replay_found_niko_iconoclasm_perditus_paradisus/) of Niko's 2011 perditus paradisus DT replay on Reddit, demonstrating that there's potentially a huge amount of old osu! content archived on the Wayback Machine that was otherwise lost to time.
 
-
 ## Data collection
 
-Every URL captured by the Wayback Machine can be obtained by querying the [CDX index](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) for octet-streams, zip files, or plain text:
+Every URL captured by the Wayback Machine can be obtained by querying the [CDX index](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) by host and mimetype:
 
 ```
-https://web.archive.org/cdx/search/cdx?url=puu.sh/4&matchType=prefix&filter=mimetype:application/octet-stream
+https://web.archive.org/cdx/search/cdx?url={host}/&matchType=prefix&filter=mimetype:application/octet-stream
 ```
 
-Each result gives a timestamp and puush ID, which is enough to download the capture and check whether it contains osu!-related files:
+Each result gives a timestamp and the original URL which can be used to download the capture and check for osu!-related files:
 
 ```
-https://web.archive.org/web/{timestamp}id_/http://puu.sh/{id}
+https://web.archive.org/web/{timestamp}id_/{original url}
 ```
 
 ## Result
@@ -70,4 +69,4 @@ https://web.archive.org/web/{timestamp}id_/http://puu.sh/{id}
 
 Many uploads share a name but differ in size (re-exports, edited skins, updated maps) and are counted separately.
 
-Please report any dead links for removal or reach out if you discover content that should not be displayed.
+Please report any dead links for removal or reach out if you think a file should be removed.
