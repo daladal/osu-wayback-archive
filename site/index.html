@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>osu! Wayback Machine archive</title>
+<meta name="description" content="osu! replays, beatmaps and skins recovered from puush, pomf and up.ppy.sh, with Wayback Machine download links">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>osu! file archive</h1>
+  <p class="sub">replays, beatmaps and skins recovered from puush, pomf.se and up.ppy.sh (2007–2015), served by the Wayback Machine.</p>
+</header>
+<hr>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="replays">Replays</button>
+  <button data-tab="beatmaps">Beatmaps</button>
+  <button data-tab="skins">Skins</button>
+  <button data-tab="archives">Other archives</button>
+</nav>
+
+<form class="controls" id="controls" onsubmit="return false">
+  <input type="search" id="q" placeholder="search… e.g. cookiezi, freedom dive, player:rrtyui mods:HDDT" autocomplete="off" spellcheck="false">
+  <select id="src"><option value="">any source</option><option value="puush">puush</option><option value="pomf">pomf</option><option value="upppy">up.ppy.sh</option></select>
+  <select id="mode" hidden><option value="">any mode</option><option value="osu">osu!</option><option value="taiko">taiko</option><option value="fruits">catch</option><option value="mania">mania</option></select>
+  <span class="count" id="count"></span>
+</form>
+
+<div class="tablewrap">
+  <table id="table"><thead></thead><tbody></tbody></table>
+</div>
+<div id="sentinel"></div>
+<p class="status" id="status"></p>
+
+<footer id="footer"></footer>
+<script src="app.js"></script>
+</body>
+</html>

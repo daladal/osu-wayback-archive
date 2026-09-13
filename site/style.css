@@ -1,0 +1,43 @@
+/* same 2008 layout, dark only: one theme, no media queries */
+:root { color-scheme: dark; }
+body { margin: 0; padding: 8px 14px 30px; background: #151515; color: #d8d8d8;
+  font: 12px/1.5 Verdana, Tahoma, Geneva, Arial, sans-serif; }
+a { color: #7fb2ff; text-decoration: underline; }
+a:visited { color: #c39cf2; }
+a:hover { color: #ff7070; }
+code { font: 11px "Courier New", Courier, monospace; }
+
+h1 { margin: 6px 0 2px; font: bold 20px Verdana, Tahoma, Arial, sans-serif; color: #f0f0f0; }
+.sub { margin: 0; color: #a0a0a0; }
+hr { border: 0; border-top: 1px solid #555; margin: 8px 0; }
+
+.tabs { margin: 0 0 8px; }
+.tabs button { background: none; border: 0; padding: 0 2px; margin: 0; color: #7fb2ff; text-decoration: underline;
+  font: inherit; cursor: pointer; }
+.tabs button:hover { color: #ff7070; }
+.tabs button.on { color: #f0f0f0; text-decoration: none; font-weight: bold; cursor: default; }
+.tabs button + button::before { content: "|"; color: #d8d8d8; margin: 0 6px 0 4px; text-decoration: none; display: inline-block; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; margin: 0 0 8px; }
+.controls input[type=search] { flex: 1 1 320px; min-width: 200px; font: inherit; padding: 2px 4px;
+  background: #1e1e1e; color: #d8d8d8; border: 1px solid #555; }
+.controls select { font: inherit; background: #1e1e1e; color: #d8d8d8; border: 1px solid #555; }
+.count { color: #a0a0a0; white-space: nowrap; }
+
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 11px; border: 1px solid #555; }
+th, td { text-align: left; padding: 2px 6px; border: 1px solid #333; vertical-align: top;
+  white-space: nowrap; max-width: 420px; overflow: hidden; text-overflow: ellipsis; }
+th { background: #2a2a2a; cursor: pointer; user-select: none; font-weight: bold; color: #f0f0f0; }
+th:hover { background: #383838; }
+th.sorted::after { content: " \25BC"; font-size: 8px; }
+th.sorted.asc::after { content: " \25B2"; }
+td.num, th.num { text-align: right; }
+td.wrap { white-space: normal; }
+tr:nth-child(even) td { background: #1b1b1b; }
+tr:hover td { background: #33331a; }
+.muted { color: #888; }
+.tag { font-size: 10px; color: #aaa; }
+#sentinel { height: 1px; }
+.status { color: #a0a0a0; padding: 8px 0; margin: 0; }
+footer { margin-top: 16px; padding-top: 6px; border-top: 1px solid #555; color: #a0a0a0; font-size: 11px; }

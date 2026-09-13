@@ -1,0 +1,35 @@
+{
+ "built_at": "2026-09-13T01:32:50Z",
+ "schema_version": "1",
+ "count_files": "69843",
+ "count_replays": "25592",
+ "count_file_copies": "3590",
+ "count_beatmapsets": "36409",
+ "count_beatmap_difficulties": "61888",
+ "count_skins": "6987",
+ "count_search": "69843",
+ "clean_date_fixed_filetime": "133",
+ "clean_date_fixed_buddhist": "10",
+ "clean_date_invalid": "2",
+ "clean_beatmap_from_cache": "1837",
+ "clean_copies_unresolved": "0",
+ "clean_recaptures_as_copies": "46",
+ "files": {
+  "replays": {
+   "rows": 25592,
+   "bytes": 7701419
+  },
+  "beatmaps": {
+   "rows": 36409,
+   "bytes": 7598910
+  },
+  "skins": {
+   "rows": 6987,
+   "bytes": 897974
+  },
+  "archives": {
+   "rows": 855,
+   "bytes": 348999
+  }
+ }
+}
