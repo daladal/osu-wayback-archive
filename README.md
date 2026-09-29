@@ -2,15 +2,17 @@
 
 [Website](https://osu-wayback-archive.pages.dev/)
 
-An index of osu! replays, skins, and beatmap files that were uploaded to now-dead file hosts and captured by the Wayback Machine. This data was collected on 2026-09-09.
+An index of osu! replays, skins, and beatmap files that were uploaded to now-dead file hosts and saved by the [Archive Team](https://wiki.archiveteam.org/). 
 
-Every file should be downloadable through its `wayback_url` link.
+You can read more about the Archive Team's work on [puu.sh](https://wiki.archiveteam.org/index.php/Puu.sh) and [pomf.se](https://wiki.archiveteam.org/index.php/Pomf.se) on their respective wiki pages.   
+
+Every file is hosted on the Wayback Machine and should be downloadable through its `wayback_url` link. The raw archive files can be found here: [puu.sh](https://archive.org/details/archiveteam_puush), [pomf.se](https://archive.org/details/archiveteam_pomf).
 
 This index was created after akozn published [their discovery](https://www.reddit.com/r/osugame/comments/1wbetqq/replay_found_niko_iconoclasm_perditus_paradisus/) of Niko's 2011 perditus paradisus DT replay on Reddit, demonstrating that there's potentially a huge amount of old osu! content archived on the Wayback Machine that was otherwise lost to time.
 
 ## Data collection
 
-Every URL captured by the Wayback Machine can be obtained by querying the [CDX index](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) by host and mimetype:
+Every archived URL can be obtained by querying the [CDX index](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) by host and mimetype:
 
 ```
 https://web.archive.org/cdx/search/cdx?url={host}/&matchType=prefix&filter=mimetype:application/octet-stream
@@ -41,7 +43,7 @@ https://web.archive.org/web/{timestamp}id_/{original url}
 - 169 `.zip`, 503 `.rar` and 14 `.7z` archives containing 2,668 more `.osr` files (`replays_zip.jsonl`, `replays_rar.jsonl`, `replays_7z.jsonl`).
 - 168 archives containing `.osk` / `.osz` files inside them (`nested_archives.jsonl`).
 
-### a.pomf.se (`pomf/`)
+### pomf.se (`pomf/`)
 
 | type | rows | approx. distinct files | file |
 |---|---|---|---|
